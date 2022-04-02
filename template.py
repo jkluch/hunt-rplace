@@ -11,7 +11,7 @@ mask_i = Image.open(BytesIO(response.content))
 # mask = Image.new("1", (3000, 3000), 0)
 mask = Image.new("1", (6000, 3000), 0)
 mask.paste(mask_i)
-mask.paste(mask_i, (3001,0))
+mask.paste(mask_i, (3000,0))
 
 # 1329,459
 # tl = (773 * 3, 735  * 3) # top left corner
