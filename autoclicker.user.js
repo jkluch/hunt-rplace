@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hunt Showdown rplace autoclicker
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  support clicking
 // @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
@@ -65,7 +65,7 @@ async function run() {
                 resolve({template_ctx: template_ctx, template_img: img})
             }
             img.onerror = reject
-            img.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo.png?tstamp=" + Math.floor(Date.now() / 10000);
+            img.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo_alpha.png?tstamp=" + Math.floor(Date.now() / 10000);
         })
     }
 
@@ -75,6 +75,18 @@ async function run() {
         return (
             ("#" + data[0].toString(16).padStart(2, 0) + data[1].toString(16).padStart(2, 0) + data[2].toString(16).padStart(2, 0)).toUpperCase()
         );
+    }
+
+    // If pixel has an alpha value ignore it
+    function getPixelAlpha(ctx, x, y) {
+        const pixel = ctx.getImageData(x, y, 1, 1);
+        const data = pixel.data;
+        if (data[3] === 255) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     async function setPixel(canvas, x, y, color) {
@@ -103,7 +115,7 @@ async function run() {
                 for (let y = 0; y < template_img.height; y++) {
                     let correct = getPixel(template_ctx, x, y);
                     let actual = getPixel(ctx, x+X_OFFSET, y+Y_OFFSET);
-                    if (actual !== correct) {
+                    if (actual !== correct && getPixelAlpha(template_ctx, x, y)) {
                         errors.push({x: x+X_OFFSET, y: y+Y_OFFSET, correct: correct, actual: actual});
                     }
                 }
