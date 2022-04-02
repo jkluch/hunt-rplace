@@ -3,10 +3,12 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the canvas!
-// @author       oralekin
+// @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @grant        none
+// @updateURL    https://jkluch.github.io/hunt-rplace/userscript.user.js
+// @downloadURL  https://jkluch.github.io/hunt-rplace/userscript.user.js
 // ==/UserScript==
 if (window.top !== window.self) {
     window.addEventListener('load', () => {
