@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hunt Showdown rplace autoclicker
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.6
 // @description  support clicking
 // @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
@@ -12,9 +12,9 @@
 // ==/UserScript==
 
 
-// 1335,488
-const X_OFFSET = 1335
-const Y_OFFSET = 488
+// 1342,490
+const X_OFFSET = 1342
+const Y_OFFSET = 490
 
 async function run() {
     const debug=false;
