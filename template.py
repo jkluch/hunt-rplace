@@ -13,9 +13,9 @@ mask = Image.new("1", (6000, 3000), 0)
 mask.paste(mask_i)
 mask.paste(mask_i, (3000,0))
 
-# 1342,490
+# 1328,490
 # tl = (773 * 3, 735  * 3) # top left corner
-tl = (1342 * 3, 490  * 3) # top left corner
+tl = (1328 * 3, 490  * 3) # top left corner
 
 # final_img = Image.new('RGBA', (3000, 3000))
 final_img = Image.new('RGBA', (6000, 3000))

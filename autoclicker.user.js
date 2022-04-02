@@ -13,7 +13,7 @@
 
 
 // 1342,490
-const X_OFFSET = 1342
+const X_OFFSET = 1328
 const Y_OFFSET = 490
 
 async function run() {
