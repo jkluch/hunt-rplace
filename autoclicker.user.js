@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hunt Showdown rplace autoclicker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  support clicking
 // @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
