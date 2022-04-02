@@ -128,7 +128,7 @@ async function run() {
         } finally {
             let timeout;
             if (edited) {
-                timeout = 1_000 * 60 * 5 + 5_000 + Math.floor(Math.random() * 15_000);
+                timeout = 1_000 * 60 * 5 + 25_000 + Math.floor(Math.random() * 15_000);
             } else {
                 timeout =Math.floor(Math.random() * 5_000);
             }
