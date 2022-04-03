@@ -12,8 +12,8 @@
 // ==/UserScript==
 
 
-// 1080,830
-const X_OFFSET = 1080
+// 1070,830
+const X_OFFSET = 1070
 const Y_OFFSET = 830
 
 async function run() {
