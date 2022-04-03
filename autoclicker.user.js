@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hunt Showdown rplace autoclicker
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  support clicking
 // @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
@@ -12,9 +12,9 @@
 // ==/UserScript==
 
 
-// 1067,830
-const X_OFFSET = 1067
-const Y_OFFSET = 830
+// 1076,832
+const X_OFFSET = 1076
+const Y_OFFSET = 832
 
 async function run() {
     const debug=false;
@@ -65,7 +65,7 @@ async function run() {
                 resolve({template_ctx: template_ctx, template_img: img})
             }
             img.onerror = reject
-            img.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo_alpha.png?tstamp=" + Math.floor(Date.now() / 10000);
+            img.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo_tiny_alpha.png?tstamp=" + Math.floor(Date.now() / 10000);
         })
     }
 
