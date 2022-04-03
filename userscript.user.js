@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hunt Showdown Logo template
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the canvas!
 // @author       jkluch
 // @match        https://hot-potato.reddit.com/embed*
@@ -16,7 +16,7 @@ if (window.top !== window.self) {
         (function () {
             const i = document.createElement("img");
             const time = Math.floor(Date.now() / 10000);
-            i.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo_tiny_alpha.png?tstamp=" + time;
+            i.src = "https://raw.githubusercontent.com/jkluch/hunt-rplace/master/huntlogo_overlay.png?tstamp=" + time;
             i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2000px;height: 1000px;";
             console.log(i);
             return i;
