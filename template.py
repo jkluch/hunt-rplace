@@ -2,7 +2,7 @@ from PIL import Image, ImageOps
 import requests
 from io import BytesIO
 
-img = Image.open("huntlogo_tiny_alpha.png")
+img = Image.open("huntlogo_tiny.png")
 img = img.resize((img.size[0] * 3, img.size[1] * 3), Image.NEAREST)
 
 mask_url = "https://media.discordapp.net/attachments/267492253168173056/959625681141104700/mask.png"
